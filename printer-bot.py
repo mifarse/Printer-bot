@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def hello_world():
     print(request.json)
+    print(request.json['type'])
     if (request.json['type']) == "confirmation":
         return "c1c43722"
     else:
