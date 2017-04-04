@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import request
 import sys
 import json
 
@@ -7,7 +8,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def hello_world():
-    return "c1c43722"
+    print(request.json)
+    return "ok"
 
 
 if __name__ == '__main__':
